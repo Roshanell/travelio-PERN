@@ -26,22 +26,22 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 	};
 
 	const handleAuthorChange = (event) => {
-		const author = event.target.checked;
+		const author = event.target.value;
 		//console.log(iscurrent);
 		settravel((travel) => ({ ...travel, author }));
 	};
 	const handleImageLinkChange = (event) => {
-		const date = event.target.value;
+		const image_link = event.target.value;
 		settravel((travel) => ({ ...travel, image_link }));
 	};
 
 	const handleBlogBodyChange = (event) => {
-		const title = event.target.value;
+		const blog_body = event.target.value;
 		settravel((travel) => ({ ...travel, blog_body }));
 	};
 
 	const handleArticlePreviewChange = (event) => {
-		const author = event.target.checked;
+		const article_preview = event.target.value;
 		//console.log(iscurrent);
 		settravel((travel) => ({ ...travel, article_preview }));
 	};
@@ -108,8 +108,8 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 				<Form.Label>Title</Form.Label>
 				<input
 					type="text"
-					id="add-user-name"
-					placeholder="First Name"
+					id="add-title"
+					placeholder="Title"
 					required
 					value={travel.title}
 					onChange={handleTitleChange}
@@ -119,8 +119,8 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 				<Form.Label>Date</Form.Label>
 				<input
 					type="text"
-					id="add-user-name"
-					placeholder="First Name"
+					id="add-date"
+					placeholder="Date"
 					required
 					value={travel.date}
 					onChange={handleDateChange}
@@ -130,8 +130,8 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 				<Form.Label>Author</Form.Label>
 				<input
 					type="text"
-					id="add-user-lastname"
-					placeholder="Last Name"
+					id="add-author"
+					placeholder="Author"
 					required
 					value={travel.author}
 					onChange={handleAuthorChange}
@@ -141,8 +141,8 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 				<Form.Label>Blog Body</Form.Label>
 				<input
 					type="text"
-					id="add-user-lastname"
-					placeholder="Last Name"
+					id="add-blog-body"
+					placeholder="Blog Body"
 					required
 					value={travel.blog_body}
 					onChange={handleBlogBodyChange}
@@ -152,8 +152,8 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 				<Form.Label>Article Preview</Form.Label>
 				<input
 					type="text"
-					id="add-user-lastname"
-					placeholder="Last Name"
+					id="add-article-preview"
+					placeholder="Article Preview"
 					required
 					value={travel.article_preview}
 					onChange={handleArticlePreviewChange}
@@ -163,8 +163,8 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 				<Form.Label>Image Google Link</Form.Label>
 				<input
 					type="text"
-					id="add-user-lastname"
-					placeholder="Last Name"
+					id="add-google-link"
+					placeholder="Image Link"
 					required
 					value={travel.image_link}
 					onChange={handleImageLinkChange}
