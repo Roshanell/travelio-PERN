@@ -3,12 +3,9 @@ import * as ioicons from "react-icons/io5";
 import MyForm from "./Form";
 import Travel from "./Travel";
 
-const ListTravels = () => {
+const ListTravels = ({ setEditingtravel }) => {
 	// this is my original state with an array of travels
 	const [travels, settravels] = useState([]);
-
-	//this is the state needed for the UpdateRequest
-	const [editingtravel, setEditingtravel] = useState(null);
 
 	const loadtravels = () => {
 		// A function to fetch the list of travels that will be load anytime that list change
@@ -23,7 +20,7 @@ const ListTravels = () => {
 		loadtravels();
 	}, [travels]);
 
-	const onSavetravel = (newtravel) => {
+	const saveTravel = (newtravel) => {
 		//console.log(newtravel, "From the parent - List of travels");
 		settravels((travels) => [...travels, newtravel]);
 	};
@@ -57,7 +54,6 @@ const ListTravels = () => {
 	return (
 		<div className="mybody">
 			<div className="list-travels">
-				<h2>Techtonica Participants </h2>
 				<ul>
 					{travels.map((travel) => {
 						return (
@@ -73,12 +69,12 @@ const ListTravels = () => {
 					})}
 				</ul>
 			</div>
-			<MyForm
+			{/* <MyForm
 				key={editingtravel ? editingtravel.id : null}
 				onSavetravel={onSavetravel}
 				editingtravel={editingtravel}
 				onUpdatetravel={updatetravel}
-			/>
+			/>  */}
 		</div>
 	);
 };

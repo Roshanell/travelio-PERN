@@ -75,7 +75,7 @@ const MyForm = ({ onSavetravel, editingtravel, onUpdatetravel }) => {
 			});
 	};
 
-	//A function to handle the post request
+	//A function to handle the put request
 	const puttravel = (toEdittravel) => {
 		return fetch(`http://localhost:8081/api/travels/${toEdittravel.id}`, {
 			method: "PUT",
