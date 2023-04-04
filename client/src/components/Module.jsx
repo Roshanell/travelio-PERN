@@ -1,4 +1,6 @@
-const Module = () => {
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+const FormModal = (props) => {
 	return (
 		<div>
 			<Modal
@@ -28,4 +30,4 @@ const Module = () => {
 	);
 };
 
-export default Module;
+export default FormModal;
