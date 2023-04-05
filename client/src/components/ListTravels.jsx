@@ -69,12 +69,6 @@ const ListTravels = ({ setEditingtravel }) => {
 					})}
 				</ul>
 			</div>
-			{/* <MyForm
-				key={editingtravel ? editingtravel.id : null}
-				onSavetravel={onSavetravel}
-				editingtravel={editingtravel}
-				onUpdatetravel={updatetravel}
-			/>  */}
 		</div>
 	);
 };
