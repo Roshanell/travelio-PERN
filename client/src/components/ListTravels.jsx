@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as ioicons from "react-icons/io5";
-import MyForm from "./Form";
-import Travel from "./Travel";
+
+import TravelCard from "./Travel";
 
 const ListTravels = ({ setEditingtravel }) => {
 	// this is my original state with an array of travels
@@ -59,7 +59,7 @@ const ListTravels = ({ setEditingtravel }) => {
 						return (
 							<li key={travel.id}>
 								{" "}
-								<Travel
+								<TravelCard
 									travel={travel}
 									toDelete={onDelete}
 									toUpdate={onUpdate}

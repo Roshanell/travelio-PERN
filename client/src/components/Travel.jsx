@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import * as ioicons from "react-icons/io5";
 
-const Travel = ({ travel, toUpdate, toDelete }) => {
+const TravelCard = ({ travel, toUpdate, toDelete }) => {
 	const onUpdate = (toUpdatetravel) => {
 		toUpdate(toUpdatetravel);
 	};
@@ -53,4 +53,4 @@ const Travel = ({ travel, toUpdate, toDelete }) => {
 	);
 };
 
-export default Travel;
+export default TravelCard;
