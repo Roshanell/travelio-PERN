@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import * as ioicons from "react-icons/io5";
 
-import TravelCard from "./Travel";
+import TravelCard from "./TravelCard";
+import ArticleComponent from "./ArticleComponent";
 
 const ListTravels = ({ setEditingtravel }) => {
 	// this is my original state with an array of travels
@@ -63,6 +64,18 @@ const ListTravels = ({ setEditingtravel }) => {
 									travel={travel}
 									toDelete={onDelete}
 									toUpdate={onUpdate}
+								/>
+							</li>
+						);
+					})}
+				</ul>
+				<ul>
+					{travels.map((travel) => {
+						return (
+							<li key={travel.id}>
+								<ArticleComponent
+									travel={travel}
+									
 								/>
 							</li>
 						);

@@ -74,3 +74,8 @@ button.btn.btn-primary {
 .article-container{
   display: flex;
 }
+
+
+.list-travels{
+	display: flex;
+}

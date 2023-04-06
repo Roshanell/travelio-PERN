@@ -6,6 +6,7 @@ import FormModal from "./components/FormModal";
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
+import ArticleComponent from "./components/ArticleComponent";
 
 function App() {
 	const [modalShow, setModalShow] = useState(false);
@@ -22,11 +23,7 @@ function App() {
 			<MyNavBar />
 			<div className="article-container">
 				<ListTravels setEditingtravel={setEditingtravel} />
-				<main>
-					<div>Your Articles Will Go Here Once Clicked</div>
-					<div>Your Articles Will Go Here Once Clicked</div>
-					<div>Your Articles Will Go Here Once Clicked</div>
-				</main>
+				{/* <ArticleComponent /> */}
 			</div>
 
 			<Button variant="primary" onClick={() => setModalShow(true)}>
